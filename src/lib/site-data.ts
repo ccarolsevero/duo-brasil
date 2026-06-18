@@ -3,7 +3,8 @@ export const siteConfig = {
   legalName: "DUO Estratégia Digital",
   tagline: "Estratégia que gera resultado.",
   hero: {
-    title: "Estratégia Digital para Empresas que Querem Crescer",
+    titleLine1: "Estratégia Digital para",
+    titleHighlight: "Empresas",
     subtitle: "Transformamos dados, tráfego e estratégia em resultados reais.",
   },
   description:
@@ -81,23 +82,16 @@ export const epicMethod = [
   },
 ];
 
-export const clients = [
-  "FQ4",
-  "Imperium",
-  "Maison",
-  "Scalecci",
-  "Slow",
-  "Subtil",
-  "UP",
-  "Via",
-  "Web",
-];
-
 export const faqs = [
   {
     question: "O que é o Método E.P.I.C™ na prática?",
     answer:
-      "É uma metodologia de gestão de tráfego pago baseada nos princípios industriais japoneses — Six Sigma, Lean e Kaizen. Cada campanha é estruturada, cada indicador é acompanhado e toda semana existe uma otimização com embasamento em dados.",
+      "É uma metodologia de gestão de tráfego pago baseada nos princípios industriais japoneses — Six Sigma, Lean e Kaizen. Cada campanha é estruturada, cada indicador é acompanhado diariamente e toda semana existe uma otimização. Nenhuma decisão é tomada sem embasamento em dados.",
+  },
+  {
+    question: "Quanto custa a gestão de tráfego pago?",
+    answer:
+      "Cada empresa tem um cenário único: concorrência, ticket médio, margem, público e objetivos diferentes. Por isso oferecemos consultoria estratégica sem custo para entender sua realidade e desenhar o investimento ideal. O valor da gestão sempre representa uma fração do retorno que você vai ter.",
   },
   {
     question: "Como funciona o diagnóstico gratuito?",
@@ -107,11 +101,11 @@ export const faqs = [
   {
     question: "Qual o investimento mínimo em anúncios?",
     answer:
-      "Trabalhamos com negócios de diferentes portes. O investimento recomendado varia conforme segmento e objetivos. No diagnóstico, você recebe uma recomendação personalizada para o seu cenário.",
+      "Trabalhamos com negócios de diferentes portes. O investimento recomendado varia conforme segmento e objetivos. No diagnóstico gratuito, você recebe uma recomendação personalizada para o seu cenário.",
   },
   {
     question: "Atende qualquer segmento de mercado?",
     answer:
-      "Sim. Atendemos empresas físicas, e-commerces, prestadores de serviço e profissionais liberais. O método parte do comportamento do seu cliente e dos dados do negócio, não de fórmulas genéricas.",
+      "Sim. Atendemos empresas físicas, e-commerces, prestadores de serviço e profissionais liberais. O Método E.P.I.C™ é adaptável a qualquer segmento, pois parte do comportamento do seu cliente e dos dados do negócio, não de fórmulas genéricas.",
   },
 ];

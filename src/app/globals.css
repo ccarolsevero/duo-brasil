@@ -79,3 +79,123 @@ body {
 .animate-fade-up {
   animation: fade-up 0.6s ease-out both;
 }
+
+.hero-beam {
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    rgba(11, 77, 133, 0.18) 50%,
+    rgba(18, 198, 194, 0.05) 100%
+  );
+  transform: skewX(-12deg);
+}
+
+.hero-grid {
+  opacity: 0.025;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-fade {
+  animation: hero-fade-up 0.7s ease-out both;
+}
+
+.hero-fade-1 { animation-delay: 0.1s; }
+.hero-fade-2 { animation-delay: 0.22s; }
+.hero-fade-3 { animation-delay: 0.34s; }
+.hero-fade-4 { animation-delay: 0.46s; }
+.hero-fade-5 { animation-delay: 0.58s; }
+
+.client-logo {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(42%) saturate(1800%)
+    hue-rotate(182deg) brightness(88%) contrast(92%);
+  opacity: 0.65;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.client-logo-cell:hover .client-logo {
+  opacity: 1;
+  filter: brightness(0) saturate(100%) invert(14%) sepia(42%) saturate(1800%)
+    hue-rotate(182deg) brightness(95%) contrast(95%);
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(231, 236, 242, 0.8);
+  transition: background-color 0.2s ease;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item[open] {
+  background: rgba(245, 247, 250, 0.35);
+}
+
+.faq-item:not([open]):hover {
+  background: rgba(245, 247, 250, 0.2);
+}
+
+.faq-summary {
+  list-style: none;
+  border-left: 3px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.faq-item[open] .faq-summary {
+  border-left-color: #12c6c2;
+  padding-left: calc(1.25rem - 3px);
+}
+
+@media (min-width: 768px) {
+  .faq-item[open] .faq-summary {
+    padding-left: calc(1.75rem - 3px);
+  }
+}
+
+.faq-summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item[open] .faq-toggle-icon {
+  border-color: rgba(18, 198, 194, 0.4);
+  background: rgba(18, 198, 194, 0.1);
+  color: #0b8f99;
+}
+
+.faq-item[open] .faq-toggle-bar-v {
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.faq-toggle-bar-v {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.faq-answer {
+  animation: faq-open 0.25s ease-out;
+}
+
+@keyframes faq-open {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

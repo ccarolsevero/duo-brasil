@@ -1,10 +1,13 @@
+import Image from "next/image";
 import { Button } from "@/components/Button";
+import { ClientLogos } from "@/components/ClientLogos";
 import { EpicMethodCards } from "@/components/EpicMethodCards";
+import { FaqSection } from "@/components/FaqSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
 import {
-  clients,
   epicMethod,
   faqs,
   services,
@@ -17,45 +20,7 @@ export default function HomePage() {
       <Header />
 
       <main>
-        <section className="relative overflow-hidden bg-gradient-to-br from-blue-deep to-[#08172e] text-white">
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute left-1/2 top-1/2 h-[32rem] w-[32rem] -translate-x-1/2 -translate-y-1/2 rotate-12 bg-turquoise/25 blur-3xl" />
-            <div className="absolute -left-20 bottom-0 h-72 w-72 bg-blue-medium/30 blur-3xl" />
-            <div className="absolute -right-20 top-0 h-72 w-72 bg-blue-medium/30 blur-3xl" />
-          </div>
-
-          <div className="relative mx-auto flex max-w-4xl flex-col items-center px-6 py-28 text-center md:py-36 lg:px-8">
-            <div className="animate-fade-up">
-              <p className="mb-6 text-xs font-bold uppercase tracking-[0.25em] text-turquoise">
-                15 anos de indústria japonesa aplicados ao tráfego pago
-              </p>
-              <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl">
-                {siteConfig.hero.title}
-              </h1>
-              <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/78 md:text-xl">
-                {siteConfig.hero.subtitle}
-              </p>
-              <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <Button
-                  href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`}
-                  external
-                >
-                  Solicitar Diagnóstico
-                </Button>
-                <Button
-                  href="/#metodo"
-                  variant="outline"
-                  className="border-white/30 text-white hover:bg-white/10 hover:text-white"
-                >
-                  Conheça Nosso Método
-                </Button>
-              </div>
-              <p className="mt-5 text-sm text-white/55">
-                30 minutos online, sem compromisso, com diagnóstico real do seu negócio.
-              </p>
-            </div>
-          </div>
-        </section>
+        <Hero />
 
         <section className="py-20">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
@@ -108,23 +73,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="border-y border-border bg-white py-16">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <p className="mb-8 text-center text-xs font-bold uppercase tracking-[0.2em] text-turquoise-dark">
-              Empresas que confiam no Método E.P.I.C™
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              {clients.map((client) => (
-                <span
-                  key={client}
-                  className="rounded-lg border border-border bg-gray-light px-5 py-3 text-sm font-bold text-blue-deep"
-                >
-                  {client}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ClientLogos />
 
         <section id="sobre" className="py-20">
           <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-2 lg:items-center lg:px-8">
@@ -165,10 +114,17 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
-              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-blue-deep text-2xl font-extrabold text-turquoise">
-                MR
+            <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
+              <div className="relative aspect-[4/5] w-full sm:aspect-[5/4]">
+                <Image
+                  src="/monique-rebessi.png"
+                  alt="Monique Rebessi, fundadora da DUO Brasil"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 1024px) 100vw, 540px"
+                />
               </div>
+              <div className="p-8">
               <p className="text-lg font-bold text-blue-deep">Monique Rebessi</p>
               <p className="text-sm font-semibold text-turquoise-dark">
                 Fundadora, DUO Brasil
@@ -177,32 +133,12 @@ export default function HomePage() {
                 Estrategista digital com 15 anos de experiência em indústria japonesa,
                 aplicando disciplina de gestão ao tráfego pago e ao crescimento digital.
               </p>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="bg-gray-light py-20">
-          <div className="mx-auto max-w-3xl px-6 lg:px-8">
-            <SectionHeading
-              eyebrow="Dúvidas frequentes"
-              title="Perguntas frequentes"
-              align="center"
-            />
-            <div className="mt-12 space-y-4">
-              {faqs.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-xl border border-border bg-white p-5"
-                >
-                  <summary className="cursor-pointer list-none font-semibold text-blue-deep marker:hidden">
-                    {faq.question}
-                  </summary>
-                  <p className="mt-3 text-sm leading-relaxed text-text-dark">{faq.answer}</p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FaqSection items={faqs} />
 
         <section id="contato" className="bg-gradient-to-br from-blue-deep to-[#08172e] py-20 text-white">
           <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
