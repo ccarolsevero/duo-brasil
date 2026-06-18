@@ -1,30 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
+import { brandAssets } from "@/lib/brand-assets";
 import { siteConfig } from "@/lib/site-data";
 
-type HeaderProps = {
-  variant?: "light" | "dark";
-};
-
-export function Header({ variant = "light" }: HeaderProps) {
-  const isDark = variant === "dark";
-
+export function Header() {
   return (
-    <header
-      className={`sticky top-0 z-50 border-b backdrop-blur-md ${
-        isDark
-          ? "border-white/10 bg-blue-deep/95"
-          : "border-border bg-white/95"
-      }`}
-    >
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-blue-deep/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src={isDark ? "/logo-horizontal.png" : "/logo-horizontal.png"}
+            src={brandAssets.logoWhite}
             alt={siteConfig.name}
-            width={160}
-            height={40}
-            className={`h-9 w-auto ${isDark ? "brightness-0 invert" : ""}`}
+            width={200}
+            height={52}
+            className="h-10 w-auto"
             priority
           />
         </Link>
@@ -34,11 +23,7 @@ export function Header({ variant = "light" }: HeaderProps) {
             <Link
               key={item.href}
               href={item.href}
-              className={`text-sm font-semibold transition-colors ${
-                isDark
-                  ? "text-white/80 hover:text-turquoise"
-                  : "text-blue-deep hover:text-turquoise-dark"
-              }`}
+              className="text-sm font-semibold text-white/80 transition-colors hover:text-turquoise"
             >
               {item.label}
             </Link>

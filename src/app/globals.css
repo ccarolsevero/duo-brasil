@@ -45,6 +45,37 @@ body {
   }
 }
 
+@keyframes epic-card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.epic-card-enter {
+  animation: epic-card-enter 0.55s ease-out both;
+}
+
+@keyframes epic-flow {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.35);
+  }
+}
+
+.epic-flow-dot {
+  animation: epic-flow 2s ease-in-out infinite;
+}
+
 .animate-fade-up {
   animation: fade-up 0.6s ease-out both;
 }

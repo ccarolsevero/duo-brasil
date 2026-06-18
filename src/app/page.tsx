@@ -1,4 +1,5 @@
 import { Button } from "@/components/Button";
+import { EpicMethodCards } from "@/components/EpicMethodCards";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -13,7 +14,7 @@ import {
 export default function HomePage() {
   return (
     <>
-      <Header variant="dark" />
+      <Header />
 
       <main>
         <section className="relative overflow-hidden bg-gradient-to-br from-blue-deep to-[#08172e] text-white">
@@ -29,26 +30,24 @@ export default function HomePage() {
                 15 anos de indústria japonesa aplicados ao tráfego pago
               </p>
               <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl">
-                {siteConfig.tagline}
+                {siteConfig.hero.title}
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/78 md:text-xl">
-                Gestão de tráfego pago com metodologia de indústria. Cada real
-                investido é acompanhado, analisado e otimizado com transparência
-                e método.
+                {siteConfig.hero.subtitle}
               </p>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
                 <Button
                   href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`}
                   external
                 >
-                  Agendar Diagnóstico Gratuito
+                  Solicitar Diagnóstico
                 </Button>
                 <Button
                   href="/#metodo"
                   variant="outline"
                   className="border-white/30 text-white hover:bg-white/10 hover:text-white"
                 >
-                  Conheça o Método E.P.I.C™
+                  Conheça Nosso Método
                 </Button>
               </div>
               <p className="mt-5 text-sm text-white/55">
@@ -92,25 +91,7 @@ export default function HomePage() {
               light
             />
 
-            <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              {epicMethod.map((step) => (
-                <div
-                  key={step.letter}
-                  className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
-                >
-                  <div className="mb-4 flex items-center gap-3">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-turquoise/20 text-lg font-extrabold text-turquoise">
-                      {step.letter}
-                    </span>
-                    <span className="text-xs font-bold text-white/50">{step.step}</span>
-                  </div>
-                  <h3 className="text-lg font-bold">{step.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/70">
-                    {step.description}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <EpicMethodCards steps={epicMethod} />
           </div>
         </section>
 

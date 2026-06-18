@@ -2,6 +2,10 @@ export const siteConfig = {
   name: "DUO Brasil",
   legalName: "DUO Estratégia Digital",
   tagline: "Estratégia que gera resultado.",
+  hero: {
+    title: "Estratégia Digital para Empresas que Querem Crescer",
+    subtitle: "Transformamos dados, tráfego e estratégia em resultados reais.",
+  },
   description:
     "Gestão de tráfego pago com metodologia de indústria. Cada investimento acompanhado, analisado e otimizado com transparência e método.",
   email: "contato@agenciaduobrasil.com.br",
@@ -52,28 +56,24 @@ export const services = [
 
 export const epicMethod = [
   {
-    step: "01",
     letter: "E",
     title: "Estratégia",
     description:
       "Entendimento aprofundado do negócio, definição de metas e indicadores que orientam cada real investido.",
   },
   {
-    step: "02",
     letter: "P",
     title: "Planejamento",
     description:
       "Estruturação de campanhas com público, canais, verba e cronograma definidos antes da execução.",
   },
   {
-    step: "03",
     letter: "I",
     title: "Implementação",
     description:
       "Lançamento do tráfego pago com execução alinhada ao planejamento aprovado e rastreamento configurado.",
   },
   {
-    step: "04",
     letter: "C",
     title: "Controle",
     description:

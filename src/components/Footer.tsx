@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { brandAssets } from "@/lib/brand-assets";
 import { siteConfig } from "@/lib/site-data";
 
 export function Footer() {
@@ -9,11 +10,11 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.2fr_1fr_1fr]">
           <div>
             <Image
-              src="/logo-horizontal.png"
+              src={brandAssets.logoDark}
               alt={siteConfig.name}
-              width={180}
-              height={48}
-              className="mb-6 h-10 w-auto brightness-0 invert"
+              width={200}
+              height={52}
+              className="mb-6 h-10 w-auto"
             />
             <p className="max-w-sm text-sm leading-relaxed text-white/70">
               Gestão de tráfego pago com metodologia de indústria. Tráfego pago,

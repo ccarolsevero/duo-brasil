@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
+import { brandAssets } from "@/lib/brand-assets";
 import { siteConfig } from "@/lib/site-data";
 
 const manrope = Manrope({
@@ -12,6 +13,10 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: `${siteConfig.name} | Tráfego Pago com Método`,
   description: siteConfig.description,
+  icons: {
+    icon: brandAssets.favicon,
+    apple: brandAssets.favicon,
+  },
 };
 
 export default function RootLayout({
