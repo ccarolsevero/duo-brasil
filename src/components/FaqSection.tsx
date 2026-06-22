@@ -34,7 +34,7 @@ export function FaqSection({ items }: FaqSectionProps) {
             <details
               key={faq.question}
               className="faq-item group"
-              {...(index === 0 ? { defaultOpen: true } : {})}
+              {...(index === 0 ? { open: true } : {})}
             >
               <summary className="faq-summary flex cursor-pointer list-none items-center gap-4 px-5 py-5 md:gap-5 md:px-7 md:py-6">
                 <span className="pointer-events-none flex-1 text-base font-semibold leading-snug text-blue-deep md:text-[17px]">

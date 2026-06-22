@@ -1,6 +1,6 @@
 type SectionHeadingProps = {
-  eyebrow: string;
-  title: string;
+  eyebrow?: string;
+  title: React.ReactNode;
   description?: string;
   light?: boolean;
   align?: "left" | "center";
@@ -17,13 +17,15 @@ export function SectionHeading({
 
   return (
     <div className={`max-w-2xl ${alignClass}`}>
-      <p
-        className={`mb-3 text-xs font-bold uppercase tracking-[0.2em] ${
-          light ? "text-turquoise" : "text-turquoise-dark"
-        }`}
-      >
-        {eyebrow}
-      </p>
+      {eyebrow && (
+        <p
+          className={`mb-3 text-xs font-bold uppercase tracking-[0.2em] ${
+            light ? "text-turquoise" : "text-turquoise-dark"
+          }`}
+        >
+          {eyebrow}
+        </p>
+      )}
       <h2
         className={`text-3xl font-extrabold leading-tight tracking-tight md:text-4xl ${
           light ? "text-white" : "text-blue-deep"

@@ -3,16 +3,20 @@ export const siteConfig = {
   legalName: "DUO Estratégia Digital",
   tagline: "Estratégia que gera resultado.",
   hero: {
-    titleLine1: "Estratégia Digital para",
-    titleHighlight: "Empresas",
-    subtitle: "Transformamos dados, tráfego e estratégia em resultados reais.",
+    title: "Marketing não é custo quando gera resultado.",
+    subtitle:
+      "Gestão profissional de tráfego pago com metodologia, indicadores e foco em vendas para sua empresa.",
   },
   description:
     "Gestão de tráfego pago com metodologia de indústria. Cada investimento acompanhado, analisado e otimizado com transparência e método.",
-  email: "contato@agenciaduobrasil.com.br",
+  email: "contato@agenciaduobrasil.com",
   whatsapp: "5511999999999",
   whatsappMessage:
     "Olá! Vim pelo site institucional da DUO Brasil e gostaria de agendar um diagnóstico estratégico.",
+  address: "Leme, São Paulo — Brasil",
+  mapsUrl: "https://maps.google.com/?q=Leme,S%C3%A3o+Paulo,Brasil",
+  instagram: "https://www.instagram.com/agenciaduobrasil/",
+  linkedin: "https://www.linkedin.com/in/monique-rebessi-02a312223/",
   nav: [
     { label: "Início", href: "/" },
     { label: "Método", href: "/#metodo" },
@@ -22,37 +26,15 @@ export const siteConfig = {
   ],
 };
 
-export const services = [
-  {
-    title: "Gestão de Tráfego Pago",
-    description:
-      "Meta Ads e Google Ads com estrutura, controle diário de indicadores e otimização contínua orientada por metas de negócio.",
-  },
-  {
-    title: "Funil e Qualificação de Leads",
-    description:
-      "Aquecimento estratégico antes da conversão. Leads chegam informados, com intenção real e prontos para avançar no funil comercial.",
-  },
-  {
-    title: "Análise e Relatórios F.C.A.",
-    description:
-      "Relatório semanal com Fato, Causa e Ação. Reunião mensal estratégica e rastreamento do clique até a venda fechada.",
-  },
-  {
-    title: "Criativos e Copy Estratégica",
-    description:
-      "Roteiros específicos por etapa do funil. Comunicação orientada por dados, não por achismo ou tendências passageiras.",
-  },
-  {
-    title: "Consultoria Comercial",
-    description:
-      "Suporte ao time de vendas com foco em conversão. Marketing e comercial alinhados para transformar investimento em receita.",
-  },
-  {
-    title: "Diagnóstico Estratégico",
-    description:
-      "Análise profunda do cenário atual, identificação de vazamentos no funil e plano de ação com indicadores claros.",
-  },
+export const deliverables = [
+  "Seus anúncios rodando em todas as plataformas com estratégia e controle",
+  "As pessoas certas encontrando o que você vende, na hora certa",
+  "Toda segunda-feira na sua mão: o que aconteceu, por que e o que estamos fazendo",
+  "Uma hora por mês só pra pensar o próximo passo do seu negócio junto comigo",
+  "Saber exatamente o que seu concorrente está fazendo e como se posicionar",
+  "Você sabe o que gravar, o que falar e pra quem em cada etapa",
+  "Seu time comercial vendendo mais com orientação estratégica",
+  "Grupo direto com sua equipe pra resolver problema antes que vire prejuízo",
 ];
 
 export const epicMethod = [
@@ -86,7 +68,7 @@ export const faqs = [
   {
     question: "O que é o Método E.P.I.C™ na prática?",
     answer:
-      "É uma metodologia de gestão de tráfego pago baseada nos princípios industriais japoneses — Six Sigma, Lean e Kaizen. Cada campanha é estruturada, cada indicador é acompanhado diariamente e toda semana existe uma otimização. Nenhuma decisão é tomada sem embasamento em dados.",
+      "É uma metodologia de gestão de tráfego pago baseada nos princípios industriais japoneses: Six Sigma, Lean e Kaizen. Cada campanha é estruturada, cada indicador é acompanhado diariamente e toda semana existe uma otimização. Nenhuma decisão é tomada sem embasamento em dados.",
   },
   {
     question: "Quanto custa a gestão de tráfego pago?",

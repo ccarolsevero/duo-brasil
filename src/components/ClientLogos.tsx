@@ -14,19 +14,19 @@ export function ClientLogos() {
             const logoScale = client.scale ?? 1.65;
 
             return (
-            <div
-              key={client.name}
-              className="client-logo-cell flex h-20 min-w-0 flex-1 items-center justify-center overflow-hidden sm:h-24 md:h-28 lg:h-32 xl:h-36"
-            >
-              <Image
-                src={client.logo}
-                alt={`Logo ${client.name}`}
-                width={320}
-                height={128}
-                className="client-logo h-full w-full object-contain"
-                style={{ transform: `scale(${logoScale})` }}
-              />
-            </div>
+              <div
+                key={client.name}
+                className="client-logo-cell flex h-20 min-w-0 flex-1 items-center justify-center overflow-hidden sm:h-24 md:h-28 lg:h-32 xl:h-36"
+              >
+                <Image
+                  src={client.logo}
+                  alt={`Logo ${client.name}`}
+                  width={320}
+                  height={128}
+                  className="client-logo h-full w-full object-contain"
+                  style={{ transform: `scale(${logoScale})` }}
+                />
+              </div>
             );
           })}
         </div>

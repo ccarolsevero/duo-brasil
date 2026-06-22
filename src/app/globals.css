@@ -90,14 +90,6 @@ body {
   transform: skewX(-12deg);
 }
 
-.hero-grid {
-  opacity: 0.025;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
-  background-size: 80px 80px;
-}
-
 @keyframes hero-fade-up {
   from {
     opacity: 0;

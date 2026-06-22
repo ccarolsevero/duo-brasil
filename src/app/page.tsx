@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import { ClientLogos } from "@/components/ClientLogos";
+import { ContactIcons } from "@/components/ContactIcons";
 import { EpicMethodCards } from "@/components/EpicMethodCards";
 import { FaqSection } from "@/components/FaqSection";
 import { Footer } from "@/components/Footer";
@@ -8,10 +9,9 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
 import {
+  deliverables,
   epicMethod,
   faqs,
-  services,
-  siteConfig,
 } from "@/lib/site-data";
 
 export default function HomePage() {
@@ -24,22 +24,30 @@ export default function HomePage() {
 
         <section className="py-20">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <SectionHeading
-              eyebrow="O que entregamos"
-              title="Resultado mensurável, não mais uma ferramenta."
-              description="Tráfego pago é o meio. O que entregamos é uma operação estratégica completa — do anúncio ao fechamento da venda."
-            />
+            <SectionHeading title="O que entregamos para transformar Marketing em Resultado." />
 
-            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {services.map((service) => (
+            <div className="mt-12 grid gap-4 md:grid-cols-2">
+              {deliverables.map((item) => (
                 <article
-                  key={service.title}
-                  className="blade-card rounded-xl border border-border bg-white p-6 shadow-sm transition hover:border-turquoise/30 hover:shadow-md"
+                  key={item}
+                  className="flex h-full items-start gap-3 rounded-xl border border-border bg-white p-5 shadow-sm transition hover:border-turquoise/30 hover:shadow-md"
                 >
-                  <div className="mb-4 h-1 w-10 bg-turquoise" />
-                  <h3 className="text-lg font-bold text-blue-deep">{service.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-text-dark">
-                    {service.description}
+                  <span
+                    aria-hidden
+                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-turquoise/10 text-turquoise-dark"
+                  >
+                    <svg viewBox="0 0 20 20" fill="none" className="h-3.5 w-3.5">
+                      <path
+                        d="M5 10l3 3 7-7"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <p className="text-sm font-medium leading-relaxed text-blue-deep">
+                    {item}
                   </p>
                 </article>
               ))}
@@ -51,8 +59,8 @@ export default function HomePage() {
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <SectionHeading
               eyebrow="O método"
-              title="Método E.P.I.C™ — Gestão com disciplina de indústria"
-              description="Quatro etapas conectadas, da estratégia ao controle. Cada fase tem objetivo, entrega e indicador definidos."
+              title="Método E.P.I.C™. Gestão com disciplina de indústria"
+              description="Quatro etapas da estratégia ao controle. Cada fase com objetivo, entrega e indicador definidos."
               light
             />
 
@@ -60,15 +68,22 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="py-20">
+        <section className="bg-[#f7fafc] py-20 md:py-24">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <SectionHeading
               eyebrow="Cases de sucesso"
-              title="Resultados documentados de clientes reais"
+              title={
+                <>
+                  Empresas de diferentes segmentos. Um objetivo em comum:{" "}
+                  <span className="text-turquoise-dark">Vender Mais.</span>
+                </>
+              }
               description="Empresas que confiam seus resultados à DUO Brasil. Veja os números por segmento e período de operação."
             />
-            <div className="mt-8">
-              <Button href="/cases">Ver todos os cases →</Button>
+            <div className="mt-10">
+              <Button href="/cases" withArrow>
+                Ver todos os cases
+              </Button>
             </div>
           </div>
         </section>
@@ -91,7 +106,7 @@ export default function HomePage() {
                   Durante <strong className="text-blue-deep">15 anos</strong>, construiu sua
                   carreira em uma multinacional japonesa, onde cada processo, indicador e
                   resultado era medido e melhorado continuamente. Six Sigma, Lean
-                  Manufacturing e Kaizen não eram conceitos teóricos — eram o dia a dia.
+                  Manufacturing e Kaizen não eram conceitos teóricos, eram o dia a dia.
                 </p>
                 <p>
                   Foi essa experiência que deu origem ao{" "}
@@ -99,18 +114,6 @@ export default function HomePage() {
                   não é arte abstrata. É investimento. E investimento se mede, se controla e
                   se otimiza.
                 </p>
-              </div>
-              <div className="mt-6 flex flex-wrap gap-2">
-                {["Método E.P.I.C™", "Meta Ads", "Google Ads", "Análise F.C.A.", "Estratégia de Vendas"].map(
-                  (tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full border border-border bg-white px-3 py-1 text-xs font-semibold text-blue-deep"
-                    >
-                      {tag}
-                    </span>
-                  ),
-                )}
               </div>
             </div>
 
@@ -129,10 +132,6 @@ export default function HomePage() {
               <p className="text-sm font-semibold text-turquoise-dark">
                 Fundadora, DUO Brasil
               </p>
-              <p className="mt-4 text-sm leading-relaxed text-text-dark">
-                Estrategista digital com 15 anos de experiência em indústria japonesa,
-                aplicando disciplina de gestão ao tráfego pago e ao crescimento digital.
-              </p>
               </div>
             </div>
           </div>
@@ -149,22 +148,7 @@ export default function HomePage() {
               light
               align="center"
             />
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Button
-                href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`}
-                external
-              >
-                Falar no WhatsApp
-              </Button>
-              <Button
-                href={`mailto:${siteConfig.email}`}
-                external
-                variant="outline"
-                className="border-white/30 text-white hover:bg-white/10 hover:text-white"
-              >
-                {siteConfig.email}
-              </Button>
-            </div>
+            <ContactIcons className="mt-10" />
           </div>
         </section>
       </main>

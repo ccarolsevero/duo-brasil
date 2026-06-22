@@ -8,7 +8,6 @@ export function Hero() {
     <section className="hero-section relative overflow-hidden text-white">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-deep via-[#063055] to-[#0a1f38]" />
       <div className="hero-beam absolute -right-[15%] top-0 h-full w-[60%]" />
-      <div className="hero-grid absolute inset-0" />
 
       <div className="absolute -left-16 bottom-0 h-72 w-72 rounded-full bg-turquoise/5 blur-3xl" />
       <div className="absolute right-1/3 top-1/3 h-56 w-56 rounded-full bg-blue-medium/10 blur-3xl" />
@@ -31,15 +30,10 @@ export function Hero() {
           </p>
 
           <h1 className="hero-fade hero-fade-2 text-[2rem] font-bold leading-[1.2] tracking-tight text-white/95 sm:text-4xl md:text-5xl md:leading-[1.15] lg:text-[3.4rem]">
-            {siteConfig.hero.titleLine1}
-            <br />
-            <span className="font-extrabold text-turquoise">
-              {siteConfig.hero.titleHighlight}
-            </span>
-            {" que Querem Crescer"}
+            {siteConfig.hero.title}
           </h1>
 
-          <p className="hero-fade hero-fade-3 mt-10 max-w-lg text-lg font-normal leading-[1.75] text-white/65 md:text-xl md:leading-[1.8]">
+          <p className="hero-fade hero-fade-3 mt-10 max-w-2xl text-lg font-normal leading-[1.75] text-white/65 md:text-xl md:leading-[1.8]">
             {siteConfig.hero.subtitle}
           </p>
 
@@ -61,8 +55,6 @@ export function Hero() {
           </p>
         </div>
       </div>
-
-      <div className="hero-divider absolute inset-x-0 bottom-0 h-20 bg-gray-light blade-divider" />
     </section>
   );
 }

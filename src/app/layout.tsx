@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
+import { WhatsAppFloatingButton } from "@/components/WhatsAppFloatingButton";
 import { brandAssets } from "@/lib/brand-assets";
 import { siteConfig } from "@/lib/site-data";
 
@@ -26,7 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${manrope.variable} antialiased`}>{children}</body>
+      <body className={`${manrope.variable} antialiased`}>
+        {children}
+        <WhatsAppFloatingButton />
+      </body>
     </html>
   );
 }
