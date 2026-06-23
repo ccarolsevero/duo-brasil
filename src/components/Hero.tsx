@@ -13,31 +13,32 @@ export function Hero() {
       <div className="absolute right-1/3 top-1/3 h-56 w-56 rounded-full bg-blue-medium/10 blur-3xl" />
 
       <div className="relative mx-auto flex min-h-[calc(100vh-5rem)] max-w-6xl flex-col items-start justify-center px-6 py-28 md:py-32 lg:px-10 lg:py-36">
-        <div className="hero-symbol pointer-events-none absolute right-8 top-1/2 hidden -translate-y-1/2 opacity-[0.04] lg:block">
+        <div className="hero-symbol pointer-events-none absolute right-8 top-1/2 z-0 hidden -translate-y-1/2 opacity-[0.04] lg:block">
           <Image
             src={brandAssets.favicon}
             alt=""
             width={360}
             height={360}
             aria-hidden
+            className="h-auto w-[22rem] max-w-none xl:w-[26rem]"
           />
         </div>
 
         <div className="relative z-10 max-w-3xl">
-          <p className="hero-fade hero-fade-1 mb-10 flex items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-turquoise/90">
+          <p className="mb-10 flex items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-turquoise/90">
             <span className="h-px w-10 bg-turquoise/40" />
             15 anos de indústria japonesa aplicados ao tráfego pago
           </p>
 
-          <h1 className="hero-fade hero-fade-2 text-[2rem] font-bold leading-[1.2] tracking-tight text-white/95 sm:text-4xl md:text-5xl md:leading-[1.15] lg:text-[3.4rem]">
+          <h1 className="text-[2rem] font-bold leading-[1.2] tracking-tight text-white/95 sm:text-4xl md:text-5xl md:leading-[1.15] lg:text-[3.4rem]">
             {siteConfig.hero.title}
           </h1>
 
-          <p className="hero-fade hero-fade-3 mt-10 max-w-2xl text-lg font-normal leading-[1.75] text-white/65 md:text-xl md:leading-[1.8]">
+          <p className="mt-10 max-w-2xl text-lg font-normal leading-[1.75] text-white/65 md:text-xl md:leading-[1.8]">
             {siteConfig.hero.subtitle}
           </p>
 
-          <div className="hero-fade hero-fade-4 mt-14 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+          <div className="mt-14 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
             <Button
               href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`}
               external
@@ -50,7 +51,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <p className="hero-fade hero-fade-5 mt-8 text-sm leading-relaxed text-white/40">
+          <p className="mt-8 text-sm leading-relaxed text-white/40">
             30 minutos online, sem compromisso, com diagnóstico real do seu negócio.
           </p>
         </div>

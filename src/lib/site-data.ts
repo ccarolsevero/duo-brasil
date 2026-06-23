@@ -13,8 +13,12 @@ export const siteConfig = {
   whatsapp: "5511999999999",
   whatsappMessage:
     "Olá! Vim pelo site institucional da DUO Brasil e gostaria de agendar um diagnóstico estratégico.",
-  address: "Leme, São Paulo — Brasil",
-  mapsUrl: "https://maps.google.com/?q=Leme,S%C3%A3o+Paulo,Brasil",
+  address: "Av. 29 de Agosto, 90 - Centro, Leme - SP, 13611-122",
+  addressComplement: "Piso 3",
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Av.+29+de+Agosto,+90+-+Centro,+Leme+-+SP,+13611-122",
+  mapsEmbedUrl:
+    "https://maps.google.com/maps?q=Av.+29+de+Agosto,+90+-+Centro,+Leme+-+SP,+13611-122&hl=pt-BR&z=16&output=embed",
   instagram: "https://www.instagram.com/agenciaduobrasil/",
   linkedin: "https://www.linkedin.com/in/monique-rebessi-02a312223/",
   nav: [

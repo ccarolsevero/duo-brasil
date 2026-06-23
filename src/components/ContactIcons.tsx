@@ -131,7 +131,10 @@ export function ContactIcons({ className = "" }: ContactIconsProps) {
 
   return (
     <div className={`flex flex-wrap items-center justify-center gap-4 ${className}`}>
-      <IconLink href={siteConfig.mapsUrl} label={`Endereço: ${siteConfig.address}`}>
+      <IconLink
+        href={siteConfig.mapsUrl}
+        label={`Endereço: ${siteConfig.address}, ${siteConfig.addressComplement}`}
+      >
         <MapPinIcon />
       </IconLink>
       <a

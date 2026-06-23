@@ -12,6 +12,7 @@ import {
   deliverables,
   epicMethod,
   faqs,
+  siteConfig,
 } from "@/lib/site-data";
 
 export default function HomePage() {
@@ -140,7 +141,7 @@ export default function HomePage() {
         <FaqSection items={faqs} />
 
         <section id="contato" className="bg-gradient-to-br from-blue-deep to-[#08172e] py-20 text-white">
-          <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
+          <div className="mx-auto max-w-5xl px-6 lg:px-8">
             <SectionHeading
               eyebrow="Contato"
               title="Resultados reais começam com uma conversa estratégica"
@@ -149,6 +150,40 @@ export default function HomePage() {
               align="center"
             />
             <ContactIcons className="mt-10" />
+
+            <div className="mt-12 flex flex-col gap-6 text-left md:flex-row md:items-center md:justify-center md:gap-10">
+              <div className="md:max-w-sm">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-turquoise">
+                  Endereço
+                </p>
+                <p className="mt-4 text-base leading-relaxed text-white/90">
+                  {siteConfig.address}
+                </p>
+                <p className="mt-2 text-base font-semibold text-white">
+                  {siteConfig.addressComplement}
+                </p>
+                <a
+                  href={siteConfig.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-turquoise transition hover:text-white"
+                >
+                  Abrir no Google Maps
+                  <span aria-hidden>→</span>
+                </a>
+              </div>
+
+              <div className="h-44 w-full overflow-hidden rounded-xl md:h-48 md:w-56 lg:w-64">
+                <iframe
+                  title="Localização DUO Brasil no Google Maps"
+                  src={siteConfig.mapsEmbedUrl}
+                  className="h-full w-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
+              </div>
+            </div>
           </div>
         </section>
       </main>
