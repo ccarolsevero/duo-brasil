@@ -10,7 +10,7 @@ export const siteConfig = {
   description:
     "Gestão de tráfego pago com metodologia de indústria. Cada investimento acompanhado, analisado e otimizado com transparência e método.",
   email: "contato@agenciaduobrasil.com",
-  whatsapp: "5511999999999",
+  whatsapp: "5519993552609",
   whatsappMessage:
     "Olá! Vim pelo site institucional da DUO Brasil e gostaria de agendar um diagnóstico estratégico.",
   address: "Av. 29 de Agosto, 90 - Centro, Leme - SP, 13611-122",
