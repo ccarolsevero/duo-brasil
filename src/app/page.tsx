@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import { ClientLogos } from "@/components/ClientLogos";
-import { ContactIcons } from "@/components/ContactIcons";
 import { EpicMethodCards } from "@/components/EpicMethodCards";
 import { FaqSection } from "@/components/FaqSection";
 import { Footer } from "@/components/Footer";
@@ -149,7 +148,16 @@ export default function HomePage() {
               light
               align="center"
             />
-            <ContactIcons className="mt-10" />
+            <div className="mt-10 flex justify-center">
+              <Button
+                href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`}
+                external
+                size="lg"
+                withArrow
+              >
+                Falar no WhatsApp
+              </Button>
+            </div>
 
             <div className="mt-12 flex flex-col gap-6 text-left md:flex-row md:items-center md:justify-center md:gap-10">
               <div className="md:max-w-sm">

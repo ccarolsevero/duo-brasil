@@ -3,9 +3,9 @@ import { clients } from "@/lib/clients-data";
 
 export function ClientLogos() {
   return (
-    <section className="border-y border-border bg-white py-10 md:py-14">
+    <section className="border-y border-border bg-white py-2 md:py-3">
       <div className="mx-auto w-full max-w-[88rem] px-2 sm:px-3 lg:px-4">
-        <p className="mb-8 text-center text-xs font-bold uppercase tracking-[0.2em] text-turquoise-dark md:mb-10">
+        <p className="mb-1 text-center text-xs font-bold uppercase tracking-[0.2em] text-turquoise-dark">
           Empresas que confiam no Método E.P.I.C™
         </p>
 
@@ -16,7 +16,7 @@ export function ClientLogos() {
             return (
               <div
                 key={client.name}
-                className="client-logo-cell flex h-20 min-w-0 flex-1 items-center justify-center overflow-hidden sm:h-24 md:h-28 lg:h-32 xl:h-36"
+                className="client-logo-cell flex h-16 min-w-0 flex-1 items-center justify-center overflow-hidden sm:h-20 md:h-24 lg:h-28"
               >
                 <Image
                   src={client.logo}
