@@ -7,11 +7,13 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 import {
   deliverables,
   epicMethod,
   faqs,
   siteConfig,
+  testimonials,
 } from "@/lib/site-data";
 
 export default function HomePage() {
@@ -68,25 +70,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="bg-[#f7fafc] py-20 md:py-24">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <SectionHeading
-              eyebrow="Cases de sucesso"
-              title={
-                <>
-                  Empresas de diferentes segmentos. Um objetivo em comum:{" "}
-                  <span className="text-turquoise-dark">Vender Mais.</span>
-                </>
-              }
-              description="Empresas que confiam seus resultados à DUO Brasil. Veja os números por segmento e período de operação."
-            />
-            <div className="mt-10">
-              <Button href="/cases" withArrow>
-                Ver todos os cases
-              </Button>
-            </div>
-          </div>
-        </section>
+        <TestimonialsSection items={testimonials} />
 
         <ClientLogos />
 

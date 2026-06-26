@@ -124,6 +124,25 @@ body {
     hue-rotate(182deg) brightness(95%) contrast(95%);
 }
 
+@keyframes client-logos-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.client-logos-marquee {
+  animation: client-logos-marquee 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .client-logos-marquee {
+    animation: none;
+  }
+}
+
 .faq-item {
   border-bottom: 1px solid rgba(231, 236, 242, 0.8);
   transition: background-color 0.2s ease;

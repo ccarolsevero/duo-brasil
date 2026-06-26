@@ -23,8 +23,7 @@ export function FaqSection({ items }: FaqSectionProps) {
     <section className="bg-gray-light py-20 md:py-24">
       <div className="mx-auto max-w-4xl px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Dúvidas frequentes"
-          title="Perguntas frequentes"
+          title="FAQ"
           description="Respostas diretas sobre método, investimento e como trabalhamos com cada cliente."
           align="center"
         />

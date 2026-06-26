@@ -24,11 +24,35 @@ export const siteConfig = {
   nav: [
     { label: "Início", href: "/" },
     { label: "Método", href: "/#metodo" },
-    { label: "Cases", href: "/cases" },
+    { label: "Depoimentos", href: "/#depoimentos" },
     { label: "Sobre", href: "/#sobre" },
     { label: "Contato", href: "/#contato" },
   ],
 };
+
+export type Testimonial = {
+  name: string;
+  company: string;
+  videoUrl: string;
+};
+
+export const testimonials: Testimonial[] = [
+  {
+    name: "Bruna",
+    company: "Saber Genuíno",
+    videoUrl: "/videos/saber-genuino-bruna.mp4",
+  },
+  {
+    name: "Lídia",
+    company: "FQ4",
+    videoUrl: "/videos/fq4-lidia.mp4",
+  },
+  {
+    name: "Elisabete",
+    company: "Estética",
+    videoUrl: "/videos/estetica-elisabete.mp4",
+  },
+];
 
 export const deliverables = [
   "Seus anúncios rodando em todas as plataformas com estratégia e controle",
